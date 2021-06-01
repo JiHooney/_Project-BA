@@ -8,15 +8,15 @@ from konlpy.tag import Okt    #형태소 분석 패키지
 
 
 #테스트하기 위해서 2페이지만 긁어온 파일 읽기
-f = open( './test.txt', 'r')
-lines = f.readlines()
+# f = open( './test.txt', 'r')
+# lines = f.readlines()
 
-outVal = 1
+outVal = '1'  #(내용+형태소)의 값
 
-#for line in sys.stdin:
-for line in lines:
-    line = line.strip() #라인 뒤에 붙어있는 공백제거
-    col = line.split( '|||' )   #|||를 기준으로 리스트로 나눔
+for line in sys.stdin:
+#for line in lines:
+    line = line.strip() #문자열에서 뒤에 붙어있는 공백제거
+    col = line.split( '|||' )   #'|||'를 기준으로 리스트로 나눔
     
          ###1. 한 분기(3개월)의 글만 추출하기 시작
     date = col[0][:-1]
@@ -30,21 +30,21 @@ for line in lines:
                     ###2. 정규표현식으로 한글 외의 문자 제거 시작
         con = re.compile( '[가-힣]+' ).findall( col[1] + col[2] ) #한글만 남기면서 단어들로 분리
         content = ''
-        for s in con: content = content + s + ' '
+        for s in con: content = content + s + ' '   #형태소 분석을 위해 단어들 다시 문자열로 합친다.
         
                     #형태소 객체생성
         okt = Okt()
-        print( okt.pos(content) )
+        content = okt.pos(content)  #content에 형태소 분석한 결과 리스트를 집어넣는다.
+        
+                    #매퍼 결과 출력(내용,형태소 | 개수)
+        for i in content:
+            output_key = i[0] + ',' + i[1]
+            print ( '%s|%s' % ( output_key ,outVal ) ) 
+                 
                 
-                
-        #print( content )
     else:
-        break
-    #print( now_month )
-    # print( content )
+        exit()
     
     
-#리듀서로 보내질 매퍼의 결과물
-print()
     
     
