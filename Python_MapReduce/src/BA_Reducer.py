@@ -1,7 +1,7 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3.6
+# -*-coding:utf-8 -*
 
 import sys
-from pickle import NONE
 
 #테스트하기 위해서 2페이지만 긁어온 파일 읽기
 # f = open( './test_reduce.txt', 'r')
