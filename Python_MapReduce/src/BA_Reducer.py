@@ -4,8 +4,8 @@
 import sys
 
 #테스트하기 위해서 2페이지만 긁어온 파일 읽기
-# f = open( './test_reduce.txt', 'r')
-# lines = f.readlines()
+f = open( './test_reduce.txt', 'r')
+lines = f.readlines()
 
 #입력키값 및 출력키값 변수 선언
 input_key = None
@@ -18,8 +18,8 @@ tmp_list = []
 n = 0 #행번호 출력을 위한 변수
 
 #매퍼출력키값으로 하나의 리스트를 만듦
-# for line in lines:
-for line in sys.stdin:
+for line in lines:
+# for line in sys.stdin:
     line = line.strip()     #문장 공백 제거
     tmp_list.append(line)
 
@@ -50,7 +50,7 @@ while len( tmp_list ) != 0:
     
     n += 1
     output_key = str(n)+ ',' + output_key
-    print( '%s,%s' %( output_key, output_value ) )  #출력결과: 행번호,내용,형태소,개수
+    print( '%s,%d' %( output_key, output_value ) )  #출력결과: 행번호,내용,형태소,개수
     
           #다시 입출력 키값 초기화
     input_key = None

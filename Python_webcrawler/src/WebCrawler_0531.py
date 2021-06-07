@@ -147,6 +147,10 @@ for page in range(1,2):
 #     write.writerows(data)
 
 #텍스트파일로 저장
+c = os.path.exists( 'test.txt' )
+print( c )
+
+
 with open( 'test.txt', 'w', encoding='utf-8' ) as f:
     for line in data:
         for l in line:
