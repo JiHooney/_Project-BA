@@ -29,8 +29,8 @@ BA (Brand Analysis)
 
 ⚙개발환경 및 개발언어
 ==================
--프로그래밍 언어 : Python3, R
--운영체제 : Window10, CentOS 7 Linux
+-프로그래밍 언어 : Python3, R<br />
+-운영체제 : Window10, CentOS 7 Linux<br />
 -소프트웨어 : Oracle VirtualBox, Jupyter Notebook, Eclipse, Hadoop, zookeeper, Flume, hive, sqoop, MySQL, MariaDB, RStudio
 
 <br />
