@@ -37,7 +37,7 @@ BA (Brand Analysis)
 <br />
 
 
-🤼 ♂Team Resume & Portfolio
+🤼 ♂Resume & Portfolio
 ==================
 이지훈 | https://www.notion.so/Ji-Hoon-s-Resume-10c2522e307141739011678922bfc89b  
 
